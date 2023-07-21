@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tally Count</title>
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script01.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="header_title">Tally Count</h1>
+    </header>
+
+    <!--       <aside class="controls">
+        <label> 
+            <span> Display</span> 
+            <select> 
+                <option> Single</option>
+                <option> Multiple</option>
+            </select>
+        </label>
+
+        <label> 
+            <span>Counter</span> 
+            <select> 
+                <option> Counter 1</option>
+                <option> Counter 2</option>
+                <option> Counter 3</option> 
+            </select>
+        </label> 
+
+        <button> Settings</button>
+    </aside>  -->
+
+    <main class="counter">
+      <input class="conuter__value" data-key="number" readonly value="0" />
+      <div class="counter__actions"></div>
+      <button data-key="subtract" class="counter__button counter__button_first">
+        -
+      </button>
+      <button data-key="add" class="counter__button">+</button>
+    </main>
+    <footer class="footer">
+      Inspired by
+      <a class="footer__links" href="https://tallycount.app/"> Tally Count </a>.
+      Note that this is merely a practice project for learning Javascript.
+    </footer>
+  </body>
+</html>
