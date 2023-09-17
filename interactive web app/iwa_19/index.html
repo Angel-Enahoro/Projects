@@ -25,8 +25,9 @@
       rel="stylesheet"
     />
 
-    <script src="./scripts.js" defer type="module"></script>
+    <script src="./scripts2.js" defer type="module"></script>
     <script src="./data.js" defer type="module"></script>
+    
   </head>
   <body>
 
@@ -62,7 +63,7 @@
           </svg>
         </div>
         <div>
-          <button class="header__button" id="data-header-search">
+          <button class="header__button" id="mainSearch">
             <svg
               class="header__icon"
               viewBox="0 96 960 960"
@@ -74,7 +75,7 @@
             </svg>
           </button>
 
-          <button class="header__button" data-header-settings id="settingsButton">
+          <button class="header__button" id= "mainSettings">
             <svg
               class="header__icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -90,66 +91,61 @@
     </header>
 
     <main class="list">
-      <div class="list__items" data-list-items></div>
-      <div class="list__message" data-list-message>No results found. Your filters might be too narrow.</div>
-      <button class="list__button" data-list-button>Show more</button>
+      <div class="list__items" data-list-items id ="data-list-items"></div>
+      <div class="list__message" id="data-list-message">No results found. Your filters might be too narrow.</div>
+      <button class="list__button" id="listButton">Show more</button>
     </main>
 
 
-    <dialog class="overlay" data-list-active>
-      <div class="overlay__preview"><img class="overlay__blur" data-list-blur src=""/><img class="overlay__image" data-list-image src=""/></div>
+    <dialog class="overlay" id="data-list-active">
+      <div class="overlay__preview"><img class="overlay__blur" id= "data-list-blur" src=""/><img class="overlay__image" data-list-image src=""/><img class="book-image"  src="" alt="Book Cover"></div>
       <div class="overlay__content">
-        <h3 class="overlay__title" data-list-title></h3>
-        <div class="overlay__data" data-list-subtitle></div>
-        <p class="overlay__data overlay__data_secondary" data-list-description></p>
+        <h3 class="overlay__title" id="data-list-title"></h3>
+        <div class="overlay__data" id ="data-list-subtitle"></div>
+        <p class="overlay__data overlay__data_secondary" id= "data-list-description"></p>
       </div>
 
       <div class="overlay__row">
-        <button class="overlay__button overlay__button_primary" data-list-close>Close</button>
+        <button class="overlay__button overlay__button_primary" id="closeList">Close</button>
       </div>
     </dialog>
 
 
-    <dialog class="overlay" data-search-overlay>
-      <div class="overlay__content">
-        <form class="overlay__form" data-search-form id="searchForm">
+    <dialog class="overlay" id="data-search-overlay">
+      <div class="overlay__content" id="overlay-content">
+        <form class="overlay__form" id="searchForm" >
           <label class="overlay__field">
             <div class="overlay__label">Title</div>
-            <input class="overlay__input" data-search-title name="title" placeholder="Any"></input>
+            <input class="overlay__input" id="data-search-title" name="title" placeholder="Any"></input>
           </label>
   
           <label class="overlay__field">
             <div class="overlay__label">Genre</div>
-            <select class="overlay__input overlay__input_select" data-search-genres name="genre"></select>
+            <select class="overlay__input overlay__input_select" id="searchGenres" name="genre" ></select>
             <option value=""></option>
           </label>
   
           <label class="overlay__field">
             <div class="overlay__label">Author</div>
-            <select class="overlay__input overlay__input_select" data-search-authors name="author"></select>
+            <select class="overlay__input overlay__input_select" id="data-search-authors" name="author" ></select>
           </label>
         </form>
 
-        
-<div id="searchResults">
-  <!-- Results will be displayed here -->
-</div>
-
         <div class="overlay__row">
-          <button class="overlay__button" data-search-cancel>Cancel</button>
+          <button class="overlay__button" data-search-cancel id="cancelSearch" >Cancel</button>
           <button class="overlay__button overlay__button_primary" type="submit" form="search" id="searchButton">Search</button>
         </div>
       </div>
     </dialog>
 
-    <dialog class="overlay" data-settings-overlay id="Sidebar">
-      <div class="overlay__content">
-        <form class="overlay__form" data-settings-theme id="settings">
+    <dialog class="overlay" id= data-settings-overlay >
+      <div class="overlay__content" id="overlay_theme_content">
+        <form class="overlay__form" id="settingsForm" >
           <label class="overlay__field">
             <div class="overlay__label">Theme</div>
 
-            <select class="overlay__input overlay__input_select" data-theme id="themeSelect">
-              <option vake="day">Day</option>
+            <select class="overlay__input overlay__input_select" id="data-theme" >
+              <option value="day">Day</option>
               <option value="night">Night</option>
             </select>
           </label>
@@ -165,3 +161,4 @@
     <div class="backdrop"></div>
   </body>
 </html>
+
